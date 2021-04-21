@@ -56,22 +56,25 @@ def ip_save(request):
     login_list = user.objects.all()
 
     flag = "False"
-
+    o_user = user()
+    print("check3")
     if len(login_list) > 0:
         for i in range(len(login_list)):
             if city == login_list[i].city:
                 count = login_list[i].count
                 o_user = user(ip=ip, city=city, state=state, country=country, count=(count + 1), date=date, time=time)
                 flag = "True"
-
+                print("check4")
         if flag == "False":
             o_user = user(ip=ip, city=city, state=state, country=country, count=1, date=date, time=time)
+            print("check5")
 
     else:
         o_user = user(ip=ip, city=city, state=state, country=country, count=1, date=date, time=time)
+        print("check6")
 
     o_user.save()
-    print("check3")
+    print("check7")
     request.session['ipCheck'] = True
 
 
