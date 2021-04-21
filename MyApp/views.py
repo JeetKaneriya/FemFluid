@@ -73,7 +73,7 @@ def ip_save(request):
         o_user = user(ip=ip, city=city, state=state, country=country, count=1, date=date, time=time)
         print("check6")
 
-    print(o_user)
+    print(o_user.ip, o_user.city, o_user.state, o_user.country, o_user.count, o_user.date, o_user.time)
     o_user.save()
     print("check7")
     request.session['ipCheck'] = True
