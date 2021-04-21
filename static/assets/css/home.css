@@ -382,6 +382,11 @@ footer .footer-content {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     
   }
+
+  .contact-form h3{
+    color: #2A58A3;
+    font-weight: 700;
+  }
   
   footer .right-content {
     align-self: center;
