@@ -52,6 +52,11 @@ def ip_save(request):
     date = dt.strftime('%A, %d-%m-%Y')
     time = dt.strftime('%H : %M : %S')
     print("check2")
+
+    if not user.objects.filter(city=city):
+        user.objects.create(ip=ip, city=city, state=state, country=country, count=1, date=date, time=time)
+        print("done")
+
     login_list = user.objects.all()
 
     flag = "False"
