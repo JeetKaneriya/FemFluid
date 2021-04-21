@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-nu#22kphdtyfl@q@9n235x39+1zg6u0^ky_^2yy69(8-j8y1pl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['femfluid.herokuapp.com', '127.0.0.1']
 
