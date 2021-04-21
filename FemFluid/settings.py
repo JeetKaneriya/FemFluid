@@ -145,31 +145,3 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# Session expiry once the user closes the browser
-
-SESSION_EXPIRE_AT_BROWSER_CLOSE = False
-
-SESSION_COOKIE_AGE = 86400
-
-
-# http redirect to https if ssl certification found
-
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-SECURE_SSL_REDIRECT = True
-
-
-# # non www to www redirect
-#
-# PREPEND_WWW = True
-
-
-# Mail api connection settings
-
-DEFAULT_FROM_EMAIL = 'jeet352002@gmail.com'
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-EMAIL_PORT = 587
-
-EMAIL_USE_TLS = True
