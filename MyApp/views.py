@@ -32,6 +32,7 @@ def ip_save(request):
 
     gip = requests.get(api)
     res = gip.json()
+    print(res)
 
     """#Database for geolocation
     gip = pygeoip.GeoIP('GeoLiteCity.dat')
