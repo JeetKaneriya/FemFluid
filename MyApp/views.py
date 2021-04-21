@@ -49,7 +49,7 @@ def ip_save(request):
     #timezone = res['timezone']
     print("check1")
     dt = datetime.now()
-    date = dt.strftime('%A, %d-%m-%Y')
+    date = dt.strftime('%d-%m-%Y')
     time = dt.strftime('%H : %M : %S')
     print("check2")
 
