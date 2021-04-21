@@ -213,16 +213,15 @@ def stats(request):
     else:
         return redirect('https://femfluid.herokuapp.com/admin_login')
 
+
 def handler404(request, exception=None):
     url = request.get_full_path()
     response = render(request, '404.html', {"url": url})
     response.status_code = 404
     return response
 
+
 def handler500(request, exception=None):
     response = render(request, '500.html', {})
     response.status_code = 500
     return response
-
-def Sitemap(request):
-    return render(request, 'sitemap.xml', content_type='text/xml')
