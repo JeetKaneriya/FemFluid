@@ -43,7 +43,7 @@ def ip_save(request):
     #timezone = res['timezone']
 
     dt = datetime.now()
-    date = dt.strftime('%d-%m-%Y')
+    date = dt.strftime('%A, %d-%m-%Y')
     time = dt.strftime('%H : %M : %S')
 
     login_list = user.objects.all()

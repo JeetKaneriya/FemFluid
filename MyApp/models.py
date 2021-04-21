@@ -9,12 +9,12 @@ class Admin:
 
 # User class for the ip details database
 class user(models.Model):
-    ip = models.CharField(max_length=20)
-    city = models.CharField(max_length=20, primary_key=True)
-    state = models.CharField(max_length=20)
-    country = models.CharField(max_length=20)
+    ip = models.CharField(max_length=50)
+    city = models.CharField(max_length=50, primary_key=True)
+    state = models.CharField(max_length=50)
+    country = models.CharField(max_length=50)
     count = models.IntegerField(default=0)
-    date = models.CharField(max_length=20)
-    time = models.CharField(max_length=20)
+    date = models.CharField(max_length=50)
+    time = models.CharField(max_length=50)
 
     objects = models.Manager()

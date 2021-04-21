@@ -260,6 +260,7 @@ img {vertical-align: middle;}
 
 .about-box table{
   margin-top: 8px;
+  font-size: 20px;
 }
 
 .about-box table img{
@@ -442,46 +443,41 @@ footer .footer-content {
     color: #7a7a7a;
   }
   
-  .footer-content .right-content {
-    color: #fff;
-  }
-  
-  .footer-content .right-content span{
-    color: white;
+  .footer-content .right-content .card{
+    background-color: #dbe8ff;
+      transition-duration: 0.5s;
+}
+
+    .footer-content .right-content .card:hover{
+        box-shadow: 5px 5px 30px -10px rgba(0,0,0,1);
+    }
+
+  .footer-content .right-content i{
+    color: #2A58A3;
     text-align: center;
-    background-color: transparent;
-    padding-right: 11px; 
-    height: 44px;
-    line-height: 44px;
-    border-radius: 50%;
-    display: inline-block;
-    font-size: 16px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    display: block;
+    font-size: 25px;
+    margin-bottom: 10px;
+      
   }
-  
-  .footer-content .right-content h2 {
-    margin-top: 0px;
-    margin-bottom: 30px;
-    font-size: 42px;
+
+  .footer-content .right-content .card-title {
+      color: #2A58A3;
     text-transform: capitalize;
     font-weight: 700;
     letter-spacing: 1px;
+      text-align: center;
   }
   
-  .footer-content .right-content h2 em {
-    font-style: normal;
-    color: #2A58A3;
-  }
-  
-  .footer-content .right-content p {
-    color: #FFF;
+  .footer-content .right-content .card-text {
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.5;
   }
   
   .footer-content .right-content a {
-    color: #FFF;
+    color: black;
   }
   
   .footer-content .right-content a:hover {
