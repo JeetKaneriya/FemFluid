@@ -32,7 +32,6 @@ def ip_save(request):
 
     gip = requests.get(api)
     res = gip.json()
-    print(res)
 
     """#Database for geolocation
     gip = pygeoip.GeoIP('GeoLiteCity.dat')
@@ -50,9 +49,9 @@ def ip_save(request):
     #timezone = res['timezone']
 
     dt = datetime.now(tz=pytz.UTC)
-    dt_timezone = dt.astimezone(pytz.timezone('Asia/Kolkata'))
-    date = dt_timezone.strftime('%A, %d-%m-%Y')
-    time = dt_timezone.strftime('%H : %M : %S')
+    # dt_timezone = dt.astimezone(pytz.timezone('Asia/Kolkata'))
+    date = dt.strftime('%A, %d-%m-%Y')
+    time = dt.strftime('%H : %M : %S')
 
     login_list = user.objects.all()
 
