@@ -47,12 +47,12 @@ def ip_save(request):
         country = res['country']
 
     #timezone = res['timezone']
-
+    print("check1")
     dt = datetime.now(tz=pytz.UTC)
-    # dt_timezone = dt.astimezone(pytz.timezone('Asia/Kolkata'))
-    date = dt.strftime('%A, %d-%m-%Y')
-    time = dt.strftime('%H : %M : %S')
-
+    dt_timezone = dt.astimezone(pytz.timezone('Asia/Kolkata'))
+    date = dt_timezone.strftime('%A, %d-%m-%Y')
+    time = dt_timezone.strftime('%H : %M : %S')
+    print("check2")
     login_list = user.objects.all()
 
     flag = "False"
@@ -71,7 +71,7 @@ def ip_save(request):
         o_user = user(ip=ip, city=city, state=state, country=country, count=1, date=date, time=time)
 
     o_user.save()
-
+    print("check3")
     request.session['ipCheck'] = True
 
 
