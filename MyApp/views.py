@@ -49,7 +49,6 @@ def ip_save(request):
     #timezone = res['timezone']
     print("check1")
     dt = datetime.now()
-    # dt_timezone = dt.astimezone(pytz.timezone('Asia/Kolkata'))
     date = dt.strftime('%A, %d-%m-%Y')
     time = dt.strftime('%H : %M : %S')
     print("check2")

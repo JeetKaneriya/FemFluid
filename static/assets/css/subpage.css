@@ -30,6 +30,10 @@
     width: 100%;
 }
 
+.accordion .card-header{
+    cursor: pointer;
+}
+
 footer{
     background-image: url("../images/footer-bg-Copy.png");
     padding-top: 0;
