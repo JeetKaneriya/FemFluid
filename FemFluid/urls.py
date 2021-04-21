@@ -15,19 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from MyApp.sitemaps import StaticViewSitemap
-from django.contrib.sitemaps.views import sitemap
-
-sitemaps = {
-    'static': StaticViewSitemap
-}
-
-handler404 = 'MyApp.views.handler404'
-handler500 = 'MyApp.views.handler500'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('MyApp.urls')),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
-    path('robots.txt', include('robots.urls')),
 ]
