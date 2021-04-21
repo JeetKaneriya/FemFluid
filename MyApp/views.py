@@ -79,8 +79,8 @@ def home(request):
     status = {"run": 2}
     request.session['login'] = False
 
-    # if not request.session.get('ipCheck', False):
-    #     ip_save(request)
+    if not request.session.get('ipCheck', False):
+        ip_save(request)
 
     if request.method == 'POST':
 
