@@ -225,4 +225,4 @@ def handler500(request, exception=None):
     return response
 
 def Sitemap(request):
-    return HttpResponse(open('sitemap.xml').read(), content_type='text/xml')
+    return render(request, 'sitemap.xml', content_type='text/xml')
