@@ -1,5 +1,6 @@
 db.sqlite3
-original_static_files/
+original_images/
+js/
 venv/
 node_modules/
 package.json

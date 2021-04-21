@@ -99,10 +99,10 @@
                 <div class="col-12 col-md-6">
                     <div class="accordion" id="accordionExample">
                         <div class="card">
-                          <div class="card-header" id="headingOne" role="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              <h5>
+                          <div class="card-header" id="headingOne">
+                              <button class="h5" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Aero MR-701
-                              </h5>
+                              </button>
                           </div>
                       
                           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
@@ -143,10 +143,10 @@
                           </div>
                         </div>
                         <div class="card">
-                          <div class="card-header" id="headingTwo" role="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                              <h5 class="collapsed" >
+                          <div class="card-header" id="headingTwo">
+                              <button class="h5 collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 Aero MR-706
-                              </h5>
+                              </button>
                           </div>
                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                             <div class="card-body">
@@ -176,10 +176,10 @@
     </footer>
     
     <!-- jQuery -->
-    <script src="{% static 'assets/js/jquery.js' %}"></script>
+    <script src="{% static 'assets/compressed/jquery.js' %}"></script>
 
     <!-- Global Init -->
-    <script src="{% static 'assets/js/subpage.js' %}"></script>
+    <script src="{% static 'assets/compressed/subpage.js' %}"></script>
 
 </body>
 </html>
