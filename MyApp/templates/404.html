@@ -1,0 +1,88 @@
+{% load static %}
+<html>
+    
+    <head>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="icon" href="{% static 'assets/images/favicon.png' %}">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <title>404 | Page Not Found</title>
+        
+        <style>
+        
+            .row{
+                position: fixed;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -o-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                
+                text-align: center;
+            }
+            
+            .right img{
+                width: 100%;
+            }
+            
+            .left img{
+                height: 32px;
+            }
+            
+            .header-text{
+                color: grey;
+            }
+            
+            .header-text strong{
+                color: black;
+            }
+            
+            .left span{
+                line-height: 1.1;
+            }
+            
+            @media (max-width: 991px){
+                .row{
+                position: static;
+                transform: translate(0%, 0%);
+                -webkit-transform: translate(0%, 0%);
+                -moz-transform: translate(0%, 0%);
+                -o-transform: translate(0%, 0%);
+                -ms-transform: translate(0%, 0%);
+                margin-top: 60px;
+            }
+            
+            }
+        
+        </style>
+        
+    </head>
+    
+    <body>
+    
+        <div class="container">
+        
+            <div class="row justify-content-center-md">
+            
+                <div class="col-7 left text-left align-self-center">
+                    <img src="{% static 'assets/images/logo.png' %}">
+                    <h4 style="margin-top: 30px">Oops!</h4>
+                    <p class="header-text"><strong>404.</strong> That's an error.</p>
+                    <span>The requested URL <strong>{{url}}</strong> was not found on this server.</span>
+                    <p class="header-text">Go back to our <a href="https://femfluid.herokuapp.com/" style="text-decoration:none">home page</a>.</p>
+                </div>
+                
+                <div class="col-5 right">
+                    <img src="{% static 'assets/images/error-img.png' %}">
+                </div>
+            
+            </div>
+        
+        </div>
+    
+    </body>
+    
+</html>

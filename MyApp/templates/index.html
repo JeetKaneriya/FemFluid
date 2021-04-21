@@ -1,0 +1,557 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="femfluid">
+    <link rel="icon" href="{% static 'assets/images/favicon.png' %}">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <title>FemFluid | Indigenous development of Next generation smart materials.</title>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static '../static/assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '../static/assets/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static '../static/assets/css/main.css' %}">
+    <link rel="stylesheet" href="{% static '../static/assets/css/home.css' %}">
+
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- success alert  -->
+    <div id="myModal" class="modala">
+        <!-- Modal content -->
+        <div class="modala-content">
+            <span class="close" style="display:none">&times;</span>
+            <div class="alert alert-success" role="alert">
+                Message sent successfully!
+                <button type="button" id="close" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+            </div>
+        </div>
+    </div>
+    <!-- success alert end -->
+
+    <!-- error alert -->
+    <div id="errorModal" class="modala">
+        <!-- Modal content -->
+        <div class="modala-content">
+            <span class="close" style="display:none">&times;</span>
+            <div class="alert alert-danger" role="alert">
+                Email address invalid.
+                <button type="button" id="errorClose" class="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+            </div>
+        </div>
+    </div>
+    <!-- error alert end -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky background-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="https://femfluid.herokuapp.com/"><img src="{% static 'assets/images/logo.png' %}" class="logo" alt="Logo"></a>
+                        <!-- ***** Logo End ***** -->
+                        <hr>
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#welcome" class="menu-item">Home</a></li>
+                            <li class="scroll-to-section"><a href="#about" class="menu-item">About</a></li>
+                            <li class="submenu infa-ul">
+                                <a href="javascript:;"  rel="nofollow">Infrastructure</a>
+                                <ul>
+                                    <li><a href="dev" class="menu-item">Development Facility</a></li>
+                                    <li><a href="test" class="menu-item">Testing Facility</a></li>
+                                    <li><a href="prod" class="menu-item">Production Facility</a></li>
+                                </ul>
+                            </li>    
+                            <li class="submenu prod-ul">
+                                <a href="javascript:;" rel="nofollow">Products</a>
+                                <ul>
+                                    <li><a href="sd_series" class="menu-item">Auto SD Series</a></li>
+                                    <li><a href="mr_series" class="menu-item">Aero MR Series</a></li>
+                                    <li><a href="arm_series" class="menu-item">ARM<sup>2</sup> Series</a></li>
+                                    <li><a href="elec_series" class="menu-item">Elec Series</a></li>
+                                    <li><a href="fluids_l" class="menu-item">Smart Fluids(L)</a></li>
+                                    <li><a href="paste" class="menu-item">Smart Paste</a></li>
+                                    <li><a href="fluids_p" class="menu-item">Smart Fluids(P)</a></li>
+                                </ul>
+                            </li>
+                            <li class="scroll-to-section"><a href="#contact-us" class="menu-item">Contact Us</a></li>
+                        </ul>
+                        <ul class="social">
+                            <li><a rel="nofollow" href="https://linkedin.com/" target="blank"><i class="fa fa-linkedin"></i></a></li>
+                            <!-- <li><a href="https://facebook.com/" target="blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/" target="blank"><i class="fa fa-twitter"></i></a></li> -->
+                            <li><a rel="nofollow" href="tel:1234567890"><i class="fa fa-phone"></i></a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+
+        <!-- ***** Header Text Start ***** -->
+        <div class="slideshow-container">
+
+            <div class="mySlideshow faded">
+                <img src="{% static 'assets/images/ssn1.jpg' %}" alt="Slideshow Image 1">
+                <div class="text"></div>
+            </div>
+
+            <div class="mySlideshow faded">
+                <img src="{% static 'assets/images/ssn2.jpg' %}" alt="Slideshow Image 2">
+                <div class="text"></div>
+            </div>
+
+            <div class="mySlideshow faded">
+                <img src="{% static 'assets/images/ssn3.jpg' %}" alt="Slideshow Image 3">
+                <div class="text"></div>
+            </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+
+    <!--    About Us-->
+
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="about-box center-heading">
+                        <h2><em>About Us</em></h2>
+                        <br>
+                        <p>Femfluid is a brainchild of collaboration between LubgrafSynoils Private limited and <a rel="nofollow" href="https://charusat.ac.in/" target="blank">Charotar University of Science and Technology (CHARUSAT)</a>. Our Knowledge stems from our core collaborators who specialize in design, Synthesis and mechanics.<br><br>
+                            To visualize Femfluids mission our dedicated team has established a strong research and development wing at CHARUSAT. Our state of the art facility is equipped for performance as well as application driven instruments that simulate real world’s conditions.<br><br>
+                            Femfluid’s knowledge of advanced science helps in bring forth various vibration solutions, Smart fluid and nano materials that are beneficial to range of industries.<br><br>
+                            Femfluid provides customized solutions to various industrial problems. Product ranges are MR fluids, MR grease, MR polishing fluids, MR based dampers for automotive, heavy vehicles, aerospace, medical and civil industries.
+                        </p><br>
+
+                        <h3>Vision</h3>
+                        <p style="margin-top: 10px">Femfluide is dedicated by a core belief to convert basic science into useful technology and products beneficial to the society.</p>
+                        <br>
+                        <h3>Mission</h3>
+                        <p style="margin-top: 10px">Indigenous development of Next generation smart materials.</p>
+                        <br>
+                        <h3>Our Values</h3>
+                            <table class="table table-sm table-borderless table-responsive">
+                                <tbody>
+                                    <tr>
+                                    <td><img src="{% static 'assets/images/bullet.png' %}" alt="bullet"></td>
+                                    <td>Dedication to innovation and science.</td>
+                                    </tr>
+                                    <tr>
+                                    <td><img src="{% static 'assets/images/bullet.png' %}" alt="bullet"></td>
+                                    <td>Value added solutions.</td>
+                                    </tr>
+                                    <tr>
+                                    <td><img src="{% static 'assets/images/bullet.png' %}" alt="bullet"></td>
+                                    <td>Adherence to qualitity.</td>
+                                    </tr>
+                                    <tr>
+                                    <td><img src="{% static 'assets/images/bullet.png' %}" alt="bullet"></td>
+                                    <td>Accord with Atma-Nirbhar mission.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--     About us end-->
+
+    <div class="right-image-decor"></div>
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section" id="infrastructure">
+        <div class="container">
+            <div class="center-heading">
+                <h2><em>Infrastructures</em></h2>
+                <p>Femfluid’s core team possesses strong knowledge in field of synthetic chemistry, vibration engineering and design & fabrication. To support our customers we have developed and set up our facility to provide complete solution from design to final product.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <h2>01</h2>
+                            <img src="{% static 'assets/images/infas-icon-1.png' %}" alt="Facility Icon 1">
+                            <h4>Development Facility</h4>
+                            <a rel="nofollow" href="https://charusat.ac.in/" target="blank" class="h6">@CHARUSAT</a>
+                            <p>Rheometer</p>
+                            <p>Magnetometer</p>
+                            <p>X-ray Defractometer</p>
+                            <a href="dev" class="main-button">
+                                More Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <h2>02</h2>
+                            <img src="{% static 'assets/images/infas-icon-3.png' %}" alt="Facility Icon 2">
+                            <h4>Test Facility</h4>
+                            <a rel="nofollow" href="https://charusat.ac.in/" target="blank" class="h6">@CHARUSAT</a>
+                            <p>Dampers Test Rig</p>
+                            <p>Life Cycle Test Rig</p>
+                            <p>Fluid Stability Test Rig</p>
+                            <a href="test" class="main-button">
+                                More Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="features-icon">
+                            <h2>03</h2>
+                            <img src="{% static 'assets/images/infas-icon-2.png' %}" alt="Facility Icon 3">
+                            <h4>Production Facility</h4>
+                            <br>
+                            <br>
+                            <p>Controlled Reactors</p>
+                            <p>Fabrication Facility</p>
+                            <p>&nbsp;</p>
+                            <a href="prod" class="main-button">
+                                More Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+    <div class="left-image-decor"></div>
+
+    <!-- application section starts -->
+    <div class="container">
+        <div class="center-heading">
+            <h2><em>Applications</em></h2>
+         </div>
+        <div class="row justify-content-center center-heading">
+        
+            <div class="col-6 col-sm-9 col-md-6 col-lg-4 text-center px-xl-4">
+                
+                <div  class="image-lid">
+                
+                    <div class="fa fa-motorcycle"></div>
+
+                    <div class="backcolour" data-scroll-reveal="enter top move 50% over 0.8s after 0.8s">
+
+                        <a href="#" class="app-title">
+                            Automotive Two Wheelers
+                        </a>
+
+                    </div>
+
+                </div>
+                
+            </div>
+        
+            <div class="col-6 col-sm-9 col-md-6 col-lg-4 text-center px-xl-4">
+                
+                <div  class="image-lid">
+                
+                    <div class="fa fa-car"></div>
+
+                    <div class="backcolour" data-scroll-reveal="enter top move 50% over 0.8s after 0.4s">
+
+                        <a href="#" class="app-title">
+                            Light Vehicles & Three Wheelers
+                        </a>
+
+                    </div>
+
+                </div>
+                
+            </div>
+        
+            <div class="col-6 col-sm-9 col-md-6 col-lg-4 text-center px-xl-4">
+                
+                <div  class="image-lid">
+                
+                    <div class="fa fa-bus"></div>
+
+                    <div class="backcolour" data-scroll-reveal="enter top move 50% over 0.8s after 0.6s">
+
+                        <a href="#" class="app-title">
+                            Four Wheelers & Luxury Vehicles
+                        </a>
+
+                    </div>
+
+                </div>
+                
+            </div>
+        
+            <div class="col-6 col-sm-9 col-md-6 col-lg-4 text-center px-xl-4">
+                
+                <div  class="image-lid">
+                
+                    <div class="fa fa-truck"></div>
+
+                    <div class="backcolour" data-scroll-reveal="enter top move 50% over 0.8s after 0.4s">
+
+                        <a href="#" class="app-title">
+                            Heavy Vehicles & off Road machines
+                        </a>
+
+                    </div>
+
+                </div>
+                
+            </div>
+        
+            <div class="col-6 col-sm-9 col-md-6 col-lg-4 text-center px-xl-4">
+                
+                <div  class="image-lid">
+                
+                    <div class="fa fa-space-shuttle"></div>
+
+                    <div class="backcolour" data-scroll-reveal="enter top move 50% over 0.8s after 0.8s">
+
+                        <a href="#" class="app-title">
+                            Aerospace & Aeronautics
+                        </a>
+
+                    </div>
+
+                </div>
+                
+            </div>
+        
+            <div class="col-6 col-sm-9 col-md-6 col-lg-4 text-center px-xl-4">
+                
+                <div  class="image-lid">
+                
+                    <div class="fa fa-shield"></div>
+
+                    <div class="backcolour" data-scroll-reveal="enter top move 50% over 0.8s after 0.6s">
+
+                        <a href="#" class="app-title">
+                            Defense
+                        </a>
+
+                    </div>
+
+                </div>
+                
+            </div>
+        
+            <div class="col-6 col-sm-9 col-md-6 col-lg-4 text-center px-xl-4">
+                
+                <div  class="image-lid">
+                
+                    <div class="fa fa-home"></div>
+
+                    <div class="backcolour" data-scroll-reveal="enter top move 50% over 0.8s after 0.6s">
+
+                        <a href="#" class="app-title">
+                            Electrical & Household Appliance
+                        </a>
+
+                    </div>
+
+                </div>
+                
+            </div>
+        
+            <div class="col-6 col-sm-9 col-md-6 col-lg-4 text-center px-xl-4">
+                
+                <div  class="image-lid">
+                
+                    <div class="fa fa-stethoscope"></div>
+
+                    <div class="backcolour" data-scroll-reveal="enter top move 50% over 0.8s after 0.4s">
+
+                        <a href="#" class="app-title">
+                            Medical Instruments and Devices
+                        </a>
+
+                    </div>
+
+                </div>
+                
+            </div>
+        
+            <div class="col-6 col-sm-9 col-md-6 col-lg-4 text-center px-xl-4">
+                
+                <div  class="image-lid">
+                
+                    <div class="fa fa-gears"></div>
+
+                    <div class="backcolour" data-scroll-reveal="enter top move 50% over 0.8s after 0.8s">
+
+                        <a href="#" class="app-title">
+                            Machine and Engineering
+                        </a>
+
+                    </div>
+
+                </div>
+                
+            </div>
+            
+        </div>
+    
+    </div>
+    <!-- application section ends -->
+
+    <!-- ***** Footer Start ***** -->
+    <footer id="contact-us">
+        <div class="container">
+            <div class="footer-content" id="contact-jump">
+                <div class="row">
+                    <!-- ***** Contact Form Start ***** -->
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="contact-form" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                            <form id="contact" action="#contact-us" method="post">
+                               {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <fieldset>
+                                            <input name="name" type="text" id="name" placeholder="Full Name*" required="" style="background-color: rgba(250,250,250,0.3);">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <fieldset>
+                                            <input name="email" type="email" id="email" placeholder="E-Mail*" required="" style="background-color: rgba(250,250,250,0.3);">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <fieldset>
+                                            <input name="contact-num" type="number" id="contact-num" placeholder="Contact Number" min="1000000000" max="9999999999" style="background-color: rgba(250,250,250,0.3);">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <fieldset>
+                                            <input name="designation" type="text" id="designation" placeholder="Designation" style="background-color: rgba(250,250,250,0.3);">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <fieldset>
+                                            <textarea name="message" rows="6" id="message" placeholder="Your Message*" required="" style="background-color: rgba(250,250,250,0.3);"></textarea>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <fieldset>
+                                            <button type="submit" id="form-submit" class="main-button">Send Message Now</button>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- ***** Contact Form End ***** -->
+                    <div class="right-content col-lg-6 col-md-12 col-sm-12">
+                        <h2 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">Address</h2>
+                        <p data-scroll-reveal="enter right move 30px over 0.6s after 0.5s">139, Charusat Campus, Nadiad-Petlad Rd<br>Changa, Gujarat-396125</p>
+                        <div data-scroll-reveal="enter right move 30px over 0.6s after 0.6s"><span class="fa fa-phone"></span><a href="tel:1234567890">+91 1234567890</a>
+                            <span class="fa fa-envelope" style="margin-left: 20px"></span><a rel="nofollow" href="mailto:abc@xyz.com" target="blank">abc@xyz.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="sub-footer">
+                        <p>Copyright &copy; 2021 <a href="https://femfluid.herokuapp.com/">FEM FLUID</a>
+
+                        | Designed by <a rel="nofollow" href="https://www.linkedin.com/in/coding-comrades-654b3120a/" target="blank">Cod'rades</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{% static 'assets/compressed/jquery.js' %}"></script>
+
+    <!-- Global Init -->
+    <script src="{% static 'assets/compressed/home.js' %}"></script>
+
+    <script>
+            var modal = document.getElementById("myModal");
+            var errorModal = document.getElementById("errorModal");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementById("close");
+            var errorSpan = document.getElementById("errorClose");
+
+            // When the user clicks the button, open the modal
+            $(window).on('load', function () {
+                var check = {{run}};
+                if(check == 1){
+                    modal.style.display = "block";
+                }
+                else if (check == 0){
+                    errorModal.style.display = "block";
+                }
+            });
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            errorSpan.onclick = function() {
+              errorModal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+              else if (event.target == errorModal) {
+                  errorModal.style.display = "none";
+              }
+            }
+    </script>
+
+</body>
+</html>
