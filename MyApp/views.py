@@ -3,9 +3,7 @@ from django.template import RequestContext
 from django.core.mail import get_connection, send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from datetime import datetime
-import pygeoip
 import requests
-import pytz
 from .models import Admin, user
 
 
@@ -33,10 +31,6 @@ def ip_save(request):
     gip = requests.get(api)
     res = gip.json()
 
-    """#Database for geolocation
-    gip = pygeoip.GeoIP('GeoLiteCity.dat')
-    res = gip.record_by_addr(ip)"""
-
     if ip == "127.0.0.1":
         city = "localhost"
         state = "-"
@@ -47,35 +41,30 @@ def ip_save(request):
         country = res['country']
 
     #timezone = res['timezone']
-    print("check1")
+
     dt = datetime.now()
     date = dt.strftime('%d-%m-%Y')
     time = dt.strftime('%H : %M : %S')
-    print("check2")
 
     login_list = user.objects.all()
 
     flag = "False"
     o_user = user()
-    print("check3")
+
     if len(login_list) > 0:
         for i in range(len(login_list)):
             if city == login_list[i].city:
                 count = login_list[i].count
                 o_user = user(ip=ip, city=city, state=state, country=country, count=(count + 1), date=date, time=time)
                 flag = "True"
-                print("check4")
+
         if flag == "False":
             o_user = user(ip=ip, city=city, state=state, country=country, count=1, date=date, time=time)
-            print("check5")
 
     else:
         o_user = user(ip=ip, city=city, state=state, country=country, count=1, date=date, time=time)
-        print("check6")
 
-    print(o_user.ip, o_user.city, o_user.state, o_user.country, o_user.count, o_user.date, o_user.time)
     o_user.save()
-    print("check7")
     request.session['ipCheck'] = True
 
 
