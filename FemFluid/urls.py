@@ -22,4 +22,5 @@ handler500 = 'MyApp.views.handler500'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('MyApp.urls')),
+    path('robots.txt', include('robots.urls')),
 ]
