@@ -23,12 +23,7 @@
         /* product image */
         @media (max-width: 768px){
             .product-img img{
-                border-radius: 2px;
-                transform: rotateZ(90deg);
-                margin-left: 25vw;
-                margin-top: -10vh;
-                margin-bottom: -6vh;
-
+                margin-bottom: 30px;
             }
         }
     </style>
@@ -96,12 +91,13 @@
                 <h3 class="col-12">Elec SD Series</h3>
 
                 <p class="col-12" style="margin-bottom: 10px;">Elec SD dampers are designed for electrical instruments that help in better vibration isolation & noise reduction. They are ideal for low loads and high vibration conditions.<br><br></p>
-                <div class="col-5 col-md-6">
-                    <div class="col-12 col-md-4 offset-md-4 product-img">
-                        <img src="{% static 'assets/images/ele-series-img.jpg' %}" alt="Elec SD Series">
+                <div class="col-12 col-md-4 col-xl-6">
+                    <div class="col-12 col-md-8 offset-md-2 col-xl-4 offset-xl-4 product-img">
+                        <img src="{% static 'assets/images/ele-series-img.jpg' %}" alt="Elec SD Series" class="d-none d-md-block">
+                        <img src="{% static 'assets/images/ele-series-img-r.jpg' %}" alt="Elec SD Series" class="d-md-none">
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-8 col-xl-6">
                     <table class="table table-sm table-borderless table-responsive">
                         <thead>
                           <tr>
