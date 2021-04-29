@@ -30,17 +30,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
-/***/ "./static/assets/css/font-awesome.css":
-/*!********************************************!*\
-  !*** ./static/assets/css/font-awesome.css ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://FemFluid/./static/assets/css/font-awesome.css?");
-
-/***/ }),
-
 /***/ "./static/assets/css/main.css":
 /*!************************************!*\
   !*** ./static/assets/css/main.css ***!
@@ -100,7 +89,7 @@ eval("/**!\r\n * @fileOverview Kickass library to create and place poppers near 
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/bootstrap.min.css */ \"./static/assets/css/bootstrap.min.css\");\n/* harmony import */ var _css_font_awesome_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/font-awesome.css */ \"./static/assets/css/font-awesome.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/main.css */ \"./static/assets/css/main.css\");\n/* harmony import */ var _css_subpage_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../css/subpage.css */ \"./static/assets/css/subpage.css\");\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://FemFluid/./static/assets/js/subpage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/bootstrap.min.css */ \"./static/assets/css/bootstrap.min.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/main.css */ \"./static/assets/css/main.css\");\n/* harmony import */ var _css_subpage_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/subpage.css */ \"./static/assets/css/subpage.css\");\n\r\n\r\n\n\n//# sourceURL=webpack://FemFluid/./static/assets/js/subpage.js?");
 
 /***/ })
 
