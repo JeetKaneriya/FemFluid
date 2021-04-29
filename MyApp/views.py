@@ -216,6 +216,9 @@ def stats(request):
 
 def handler404(request, exception=None):
     url = request.get_full_path()
+    if(len(url)>10):
+        url = url[0:11]
+        url = url + "..."
     response = render(request, '404.html', {"url": url})
     response.status_code = 404
     return response
