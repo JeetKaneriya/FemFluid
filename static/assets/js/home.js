@@ -1,6 +1,6 @@
+import '../css/home.css';
 import '../css/bootstrap.min.css';
 import '../css/font-awesome.css';
-import '../css/home.css';
 import '../css/main.css';
 import '../css/subpage.css';
 
