@@ -6,4 +6,5 @@ package-lock.json
 webpack.config.js
 dist/
 js/
+css/
 sitemap.html
