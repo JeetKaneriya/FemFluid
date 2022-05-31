@@ -1,252 +1,290 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<link rel="icon" href="{% static 'assets/images/favicon.png' %}">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <link rel="icon" href="{% static 'assets/images/favicon.png' %}" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
 
-<title>Fem Fluid | Admin Login</title>
+    <title>Fem Fluid | Admin Login</title>
 
-<!-- Additional CSS Files -->
-<link rel="stylesheet" type="text/css" href="{% static 'assets/compressed/admin.css' %}">
+    <!-- Additional CSS Files -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'assets/compressed/admin.css' %}"
+    />
 
-<style>
-    .logo{
-        text-align: center!important;
-        float: none!important;
-    }
-    .header-area{
+    <style>
+      .logo {
+        text-align: center !important;
+        float: none !important;
+      }
+      .header-area {
         background-color: #f7f7f7;
         height: 80px;
-    }
-    @media (max-width: 991px) {
-        .logo{
-        padding-left: 0%;
+      }
+      @media (max-width: 991px) {
+        .logo {
+          padding-left: 0%;
         }
-    }
+      }
 
-    .card{
-
+      .card {
         margin-top: 130px;
         text-align: center;
         width: 400px;
         margin-bottom: 20px;
+      }
 
-    }
-
-    @media (max-width: 991px) {
-        .card{
-            width: auto;
-            margin-right: 10px;
-            margin-left: 10px;
+      @media (max-width: 991px) {
+        .card {
+          width: auto;
+          margin-right: 10px;
+          margin-left: 10px;
         }
-    }
+      }
 
-    form{
-
+      form {
         margin-top: 30px;
+      }
 
-    }
-
-    #error{
-
+      #error {
         text-align: left;
+      }
 
-    }
-
-    #li-footer, #su-footer{
-
+      #li-footer,
+      #su-footer {
         margin-top: 50px;
+      }
 
-    }
-
-    #su-footer{
-
+      #su-footer {
         display: none;
+      }
 
-    }
-
-    #toggle-link{
-
-        color: #007BFF;
+      #toggle-link {
+        color: #007bff;
         font-size: 10pt;
+      }
 
-    }
-
-    #toggle-link:hover{
-
-        color: #0069D9;
+      #toggle-link:hover {
+        color: #0069d9;
         cursor: pointer;
+      }
 
-    }
-
-    .card button{
-
+      .card button {
         width: 100%;
+      }
 
-    }
-
-    #login-btn{
-
+      #login-btn {
         border: none;
-        background-color: #237AAA;
-    }
+        background-color: #237aaa;
+      }
 
-    .sub-footer{
-        padding: 30px 0px!important;
-    }
+      .sub-footer {
+        padding: 30px 0px !important;
+      }
 
-    
-/* success alert */
-.modala {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 100; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+      /* success alert */
+      .modala {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 100; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+      }
 
-/* Modal Content */
-.modala-content {
-  position: relative;
-  margin: auto;
-  padding: 0!important;
-  width:336px;
-  border: none;
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s
-}
+      /* Modal Content */
+      .modala-content {
+        position: relative;
+        margin: auto;
+        padding: 0 !important;
+        width: 336px;
+        border: none;
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s;
+      }
 
-/* Add Animation */
-@-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
-}
+      /* Add Animation */
+      @-webkit-keyframes animatetop {
+        from {
+          top: -300px;
+          opacity: 0;
+        }
+        to {
+          top: 0;
+          opacity: 1;
+        }
+      }
 
-@keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
-}
+      @keyframes animatetop {
+        from {
+          top: -300px;
+          opacity: 0;
+        }
+        to {
+          top: 0;
+          opacity: 1;
+        }
+      }
 
-.modala-content .alert{
-	margin: 0;	
-  text-align:center;
-}
-</style>
-
-</head>
-<body>
+      .modala-content .alert {
+        margin: 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
     <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <center>
-                        <nav class="main-nav">
-                            <!-- ***** Logo Start ***** -->
-                            <a href="https://femfluid.herokuapp.com/"><img src="{% static 'assets/images/logo.png' %}" class="logo" alt="Logo"></a>
-                            <!-- ***** Logo End ***** -->
-                        </nav>
-                    </center>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <center>
+              <nav class="main-nav">
+                <!-- ***** Logo Start ***** -->
+                <a href="https://femfluid.herokuapp.com/"
+                  ><img
+                    src="{% static 'assets/images/logo.png' %}"
+                    class="logo"
+                    alt="Logo"
+                /></a>
+                <!-- ***** Logo End ***** -->
+              </nav>
+            </center>
+          </div>
         </div>
+      </div>
     </header>
 
     <!-- success alert  -->
     <div id="myModal" class="modala">
-        <!-- Modal content -->
-        <div class="modala-content">
-            <span class="close" style="display:none">&times;</span>
-            <div class="alert alert-danger" role="alert">
-                Email or password is incorrect
-                <button type="button" id="close" class="close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+      <!-- Modal content -->
+      <div class="modala-content">
+        <span class="close" style="display: none">&times;</span>
+        <div class="alert alert-danger" role="alert">
+          Email or password is incorrect
+          <button type="button" id="close" class="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+      </div>
     </div>
     <!-- success alert end -->
 
     <center>
-        <div class="card">
-            <h3 class="card-header">Login</h3>
-            <div class="card-body">
+      <div class="card">
+        <h3 class="card-header">Login</h3>
+        <div class="card-body">
+          <div id="error"></div>
 
-                <div id="error">
-                </div>
-
-                <form method="post">
-                    {% csrf_token %}
-                    <div class="form-group">
-
-                        <input type="email" class="form-control" id="text" name="email" aria-describedby="emailHelp" required="" placeholder="Your Email">
-
-                    </div>
-                    <div class="form-group">
-
-                        <input type="password" class="form-control" name="password" id="text" required="" placeholder="Password">
-
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="login-btn" name="li-submit">Login!</button>
-                </form>
+          <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control"
+                id="text"
+                name="email"
+                aria-describedby="emailHelp"
+                required=""
+                placeholder="Your Email"
+              />
             </div>
+            <div class="form-group">
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                id="text"
+                required=""
+                placeholder="Password"
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              id="login-btn"
+              name="li-submit"
+            >
+              Login!
+            </button>
+          </form>
         </div>
+      </div>
     </center>
-    <footer id="contact-us" style="position: absolute; background-image: url({% static 'assets/images/footer-bg-Copy.png' %}); padding-top: 0">
-        <div class="container">
+    <footer
+      id="contact-us"
+      style="
+        position: absolute;
+        background-image: url({%static'assets/images/footer-bg-Copy.png'%});
+        padding-top: 0;
+      "
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="sub-footer">
+              <p>
+                Copyright &copy; 2021
+                <a href="https://femfluid.herokuapp.com/">FEM FLUID</a>
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="sub-footer">
-                        <p>Copyright &copy; 2021 <a href="https://femfluid.herokuapp.com/">FEM FLUID</a>
-
-                        | Designed by <a href="https://www.linkedin.com/in/coding-comrades-654b3120a/" target="blank">Cod'rades</a></p>
-                    </div>
-                </div>
+                | Designed by
+                <a
+                  href="https://www.linkedin.com/in/jeet-kaneriya-9853b2240"
+                  target="blank"
+                  >Jeet Kaneriya</a
+                >
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </footer>
 
     <script src="{% static 'assets/compressed/jquery.js' %}"></script>
-    
+
     <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
+      // Get the modal
+      var modal = document.getElementById("myModal");
 
-        // Get the <span> element that closes the modal
-        var span = document.getElementById("close");
+      // Get the <span> element that closes the modal
+      var span = document.getElementById("close");
 
-        // When the user clicks the button, open the modal
-        $(window).on('load', function () {
-            if({{check}} == 0){
-                modal.style.display = "block";
-            }
-        });
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
+      // When the user clicks the button, open the modal
+      $(window).on('load', function () {
+          if({{check}} == 0){
+              modal.style.display = "block";
           }
-        }
+      });
 
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
     </script>
-</body>
+  </body>
 </html>
