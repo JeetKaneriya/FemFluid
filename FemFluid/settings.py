@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-nu#22kphdtyfl@q@9n235x39+1zg6u0^ky_^2yy69(8-j8y1pl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['femfluid.herokuapp.com', '127.0.0.1']
 
@@ -161,9 +161,9 @@ SESSION_COOKIE_AGE = 86400
 
 # http redirect to https if ssl certification found
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
 
 
 # # non www to www redirect
